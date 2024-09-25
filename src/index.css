@@ -1,0 +1,144 @@
+:root {
+
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+
+
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--dark-blue);
+  font-family: "Manrope", sans-serif;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.card {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dark-grayish-blue);
+  padding: 28px;
+  padding-bottom: 55px;
+  border-radius: 10px;
+  box-shadow:  0px 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.card p {
+  font-size: 28px;
+}
+
+.card h5 {
+  letter-spacing: 5px;
+  color: var(--neon-green);
+  margin-bottom: 0px;
+}
+
+button {
+  background-color: var(--neon-green);
+  border: none;
+  height: 60px; /* Set button height */
+  width: 60px; /* Set button width */
+  border-radius: 50%; /* Make it circular */
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition:  0.3s ease;
+}
+button:hover{
+  box-shadow: 0px 0px 50px 2px var(--neon-green);
+  height: 70px;
+  width: 70px;
+  bottom: -35px;
+}
+button:active{
+  box-shadow: 0px 0px 50px 2px var(--neon-green);
+  height: 60px;
+  width: 60px;
+  bottom: -30px;
+}
+nav{
+  background-color: var(--dark-grayish-blue);
+}
+nav h4{
+  color: var(--neon-green);
+  margin-left: 8px;
+}
+.logo_qotes{
+  
+  word-wrap: break-word;
+  line-height: 1.8;
+  margin: 0px;
+}
+
+
+@media only screen and (max-width: 375px) {
+  /* Your styles for 375px screens go here */
+  body {
+    font-size: 14px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    font-size: 16px;
+  }
+
+ nav h4{
+  display: none;
+ }
+ footer{
+  flex-direction: column;
+  width: 100%;
+ }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* Your styles for 375px screens go here */
+  body {
+    font-size: 14px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .header {
+    font-size: 16px;
+  }
+
+ nav h4{
+  display: none;
+ }
+}
