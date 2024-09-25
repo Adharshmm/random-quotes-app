@@ -3,7 +3,7 @@ import axios from 'axios';
 function QuoteCard() {
     const [quotesData, setQuotesData] = useState([]);
     const [currentQuote, setCurrentQuote] = useState({});
-    const [dividerImg, setDividerImg] = useState("/src/assets/pattern-divider-desktop.svg");
+    const [dividerImg, setDividerImg] = useState("/pattern-divider-desktop.svg");
     useEffect(() => {
         const fetchQuotes = async () => {
             try {
@@ -25,9 +25,9 @@ function QuoteCard() {
           const mediaQuery = window.matchMedia("(max-width: 375px)");
           const handleMediaQueryChange = (e) => {
               if (e.matches) {
-                  setDividerImg("/src/assets/pattern-divider-mobile.svg");
+                  setDividerImg("/pattern-divider-mobile.svg");
               } else {
-                  setDividerImg("/src/assets/pattern-divider-desktop.svg");
+                  setDividerImg("/pattern-divider-desktop.svg");
               }
           };
           handleMediaQueryChange(mediaQuery);
@@ -51,7 +51,7 @@ function QuoteCard() {
         <>
             {/* header */}
             <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <img src="/src/assets/Quotify.png" alt="Logo" height={35} width={35} />
+                <img src="/Quotify.png" alt="Logo" height={35} width={35} />
                 <h2 style={{ display: 'inline', marginLeft: '8px' }}>Quotify</h2>
                 <h4> &ldquo; let Qoutify be your daily source of encouragement &rdquo;</h4>
             </nav>
@@ -63,7 +63,7 @@ function QuoteCard() {
                     <p> &ldquo;{currentQuote.quote}&rdquo;</p>
                     <img src={dividerImg} alt="" />
                     <button onClick={getRandomQuote}>
-                        <img src="/src/assets/icon-dice.svg" alt="" height={25} width={25} />
+                        <img src="/icon-dice.svg" alt="" height={25} width={25} />
                     </button>
                 </div>
             </div>
@@ -71,7 +71,7 @@ function QuoteCard() {
             <footer style={{ display: 'flex', alignItems: "baseline", justifyContent: "space-around" }}>
                 <div >
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <img src="/src/assets/Quotify.png" alt="Logo" height={35} width={35} />
+                        <img src="/Quotify.png" alt="Logo" height={35} width={35} />
                         <h2 style={{ display: 'inline', marginLeft: '8px' }}>Quotify</h2>
                     </div>
                     <h5 className='logo_qotes'>Qoutify is your go-to destination for inspiration and wisdom, offering a curated collection of powerful quotes from renowned thinkers, authors, and visionaries. Whether you seek motivation, reflection, or simply a moment of pause in your busy day, Qoutify provides a fresh quote to uplift your spirits and spark your creativity. Join us in exploring the thoughts that shape our world, one quote at a time.
